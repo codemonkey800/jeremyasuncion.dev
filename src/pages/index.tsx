@@ -44,7 +44,6 @@ export default function Home() {
           className={clsx(
             'mt-8',
             'flex flex-col md:flex-row',
-            'gap-8 2xl:gap-14',
             'items-center',
             styles.links,
           )}
@@ -57,7 +56,7 @@ export default function Home() {
         >
           {LINKS.map(({ title, href }) => (
             <Link
-              className="hover:text-purple-400 transition-colors"
+              className="hover:text-purple-400 transition-colors my-4 md:my-0 md:mx-7"
               href={href}
               newTab
             >
