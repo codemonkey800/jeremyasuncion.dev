@@ -5,6 +5,7 @@
   "scripts": {
     "build": "next build",
     "lint": "next lint",
+    "prettier": "prettier -c .",
     "dev": "next dev -p 8080",
     "start": "next start -p 8080",
     "type-check": "tsc -p ."
