@@ -1,7 +1,5 @@
 import clsx from 'clsx'
-import { motion } from 'framer-motion'
 import Head from 'next/head'
-import { useState } from 'react'
 
 import { Link, TypedHeader } from 'src/components'
 
@@ -23,12 +21,14 @@ const LINKS = [
 ]
 
 export default function Home() {
-  const [isTypingComplete, setIsTypingComplete] = useState(false)
-
   return (
     <>
       <Head>
         <title>Jeremy Asuncion</title>
+        <meta
+          name="description"
+          content="Frontend Engineer and llama enthusiast."
+        />
       </Head>
 
       <main
@@ -38,24 +38,22 @@ export default function Home() {
           'flex flex-col items-center justify-center',
         )}
       >
-        <TypedHeader onComplete={() => setIsTypingComplete(true)} />
+        <h1 className={clsx(styles.header, 'mb-2 text-center')}>
+          Jeremy Asuncion
+        </h1>
+        <TypedHeader />
 
-        <motion.nav
+        <nav
           className={clsx(
             'mt-8',
             'flex flex-col md:flex-row',
             'items-center',
             styles.links,
           )}
-          initial="hidden"
-          animate={isTypingComplete ? 'visible' : 'hidden'}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1 },
-          }}
         >
           {LINKS.map(({ title, href }) => (
             <Link
+              key={href}
               className="hover:text-purple-400 transition-colors my-4 md:my-0 md:mx-7"
               href={href}
               newTab
@@ -63,7 +61,7 @@ export default function Home() {
               {title}
             </Link>
           ))}
-        </motion.nav>
+        </nav>
       </main>
     </>
   )
