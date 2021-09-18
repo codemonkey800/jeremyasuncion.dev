@@ -5,7 +5,7 @@ import { GA_TRACKING_SCRIPT, GA_TRACKING_SCRIPT_SRC } from 'src/gtag'
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script async src={GA_TRACKING_SCRIPT_SRC} />
