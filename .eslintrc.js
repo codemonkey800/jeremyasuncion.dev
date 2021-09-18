@@ -4,7 +4,7 @@ module.exports = {
   },
 
   root: true,
-  extends: ['airbnb-base', 'prettier'],
+  extends: ['next/core-web-vitals'],
   plugins: ['simple-import-sort', 'prettier'],
 
   rules: {
@@ -23,7 +23,6 @@ module.exports = {
       files: ['./src/**/*.ts{,x}'],
 
       extends: [
-        'next',
         'airbnb-typescript',
         'airbnb/hooks',
         'plugin:@typescript-eslint/recommended',
