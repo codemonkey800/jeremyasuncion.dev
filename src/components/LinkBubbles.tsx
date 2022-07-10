@@ -19,7 +19,7 @@ interface LinkData {
 const LINK_DATA: Record<LinkBubbleType, LinkData> = {
   github: {
     title: 'GitHub',
-    href: 'https://github.com/codemonkey800',
+    href: 'https://github.com/codemonkey800/jeremyasuncion.dev',
     Icon: GitHubIcon,
   },
 
