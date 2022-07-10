@@ -6,7 +6,6 @@ import styles from './TypedHeader.module.css'
 const TYPING_SPEED = 30
 const STRINGS = [
   'Frontend Engineer',
-  'CZI',
   'SJSU Alumni',
   'Skateboarder',
   'Llama Enthusiast',

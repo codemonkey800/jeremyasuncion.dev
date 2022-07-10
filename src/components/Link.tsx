@@ -3,7 +3,6 @@ import { AnchorHTMLAttributes } from 'react'
 
 interface Props extends AnchorHTMLAttributes<HTMLElement> {
   href: string
-  newTab?: boolean
   linkProps?: LinkProps
 }
 
@@ -15,12 +14,11 @@ export function Link({
   children,
   href,
   linkProps = { href },
-  newTab,
   ...props
 }: Props) {
   let newTabProps: AnchorHTMLAttributes<HTMLElement> | undefined
 
-  if (newTab) {
+  if (href.startsWith('http')) {
     // For new tabs, add rel=noreferrer for security:
     // https://web.dev/external-anchors-use-rel-noopener/#how-to-improve-your-site's-performance-and-prevent-security-vulnerabilities
     newTabProps = {
