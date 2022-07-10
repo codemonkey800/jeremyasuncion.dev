@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import Typed from 'react-typed'
 
-import styles from './TypedHeader.module.css'
+import styles from './TypedHeader.module.scss'
 
 const TYPING_SPEED = 30
 const STRINGS = [
